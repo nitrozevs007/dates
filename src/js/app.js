@@ -51,7 +51,7 @@ setInterval(() => {
 
   elYear.textContent = date.getFullYear()
 
-  elDot.style.color = 'balck'
+  elDot.style.color = 'black'
  
 }, 1000);
 
@@ -63,9 +63,9 @@ const currentDayIndex = date.getDay()
 
 dayElements.forEach((day, index) => {
   if (index === currentDayIndex - 1) { 
-    day.classList.add('active'); // Hozirgi kun uchun class qo'shish
+    day.classList.add('active')
   } else {
-    day.classList.remove('active'); // Boshqa kunlardan olib tashlash
+    day.classList.remove('active')
   }
 })
 
