@@ -8,6 +8,7 @@ let elMinute = document.querySelector('.min')
 let elSecond = document.querySelector('.sec')
 let elDot = document.querySelectorAll('.dot')
 let elLight = document.querySelector('.light')
+const dayElements = document.querySelectorAll('#day')
 
 
 setInterval(() => {
@@ -51,36 +52,19 @@ setInterval(() => {
 
   elYear.textContent = date.getFullYear()
 
-  elDot.style.color = 'black'
 
- 
 }, 1000);
 
 
-const date = new Date();
-let currentDayIndex = date.getDay(); // Hozirgi hafta kuni indeksi (0 = Sunday, 6 = Saturday)
-
-// Yakshanbani hafta oxiriga (6 indeksga) ko‘chirish
-if (currentDayIndex === 0) {
-  currentDayIndex = 6; // Sunday => 6
-} else {
-  currentDayIndex -= 1; // Boshqa kunlarni 1 ga kamaytirish
-}
-
-// Barcha "day" elementlarini olish
-const dayElements = document.querySelectorAll('.day');
-
-// Aktiv klassni boshqarish
+const date = new Date()
+const currentDayIndex = date.getDay()
 dayElements.forEach((day, index) => {
-  if (index === currentDayIndex) {
+  if (index === currentDayIndex - 1) { 
     day.classList.add('active'); // Hozirgi kun uchun class qo'shish
   } else {
     day.classList.remove('active'); // Boshqa kunlardan olib tashlash
   }
-});
-
-
-
+})
 
 
 
