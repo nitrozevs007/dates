@@ -19,7 +19,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   flex-direction: column;
 }
 
@@ -148,7 +148,7 @@ body {
   }
 }
 
-@media (max-width:550px) {
+@media (max-width:560px) {
   #notphone {
     display: none;
   }
@@ -159,5 +159,17 @@ body {
 
   .week {
     flex-direction: column;
+  }
+}
+
+@media (max-width:480px) {
+  .time {
+    font-size: 4rem;
+  }
+  .week {
+    font-size: 1rem;
+  }
+  .kun {
+    font-size: 1rem;
   }
 }
