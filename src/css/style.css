@@ -169,12 +169,18 @@ body {
   .active {
     padding: 0 20px;
   }
+  .main {
+    display: flex;
+  }
 }
 
 @media (max-width:1200px) {
   .week {
     gap: 10px;
     font-size: 4rem;
+  }
+  .main {
+    display: flex;
   }
 }
 
@@ -187,11 +193,17 @@ body {
   .time {
     font-size: 10rem;
   }
+  .main {
+    display: flex;
+  }
 }
 
 @media (max-width:850px) {
   .time {
     font-size: 8rem;
+  }
+  .main {
+    display: flex;
   }
 }
 
@@ -204,6 +216,9 @@ body {
   }
   .kun {
     font-size: 2rem;
+  }
+  .main {
+    display: flex;
   }
 }
 
@@ -218,6 +233,9 @@ body {
 
   .week {
     flex-direction: column;
+  }
+  .main {
+    display: flex;
   }
 }
 
