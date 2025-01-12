@@ -93,6 +93,65 @@ body {
 }
 
 
+.main {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+
+#round {
+  border: 1px solid rgb(0, 255, 0);
+  border-radius: 50%;
+  animation: wawe;
+  opacity: 70%;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.round1 {
+  width: 300px;
+  height: 300px;
+}
+.round2 {
+  width: 250px;
+  height: 250px;
+}
+.round3 {
+  width: 200px;
+  height: 200px;
+}
+.round4 {
+  width: 150px;
+  height: 150px;
+}
+.round5 {
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes wawe {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
 @media (max-width: 1350px) {
   .digital-clock {
     padding-block-end: 20px;
@@ -171,5 +230,9 @@ body {
   }
   .kun {
     font-size: 1rem;
+  }
+
+  .main {
+    display: flex;
   }
 }
