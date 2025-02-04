@@ -50,3 +50,10 @@ document.getElementById("installBtn").addEventListener("click", () => {
 document.getElementById("closeModal").addEventListener("click", () => {
   document.getElementById("installModal").style.display = "none";
 });
+
+
+if (window.matchMedia('(display-mode: standalone)').matches) {
+  console.log("PWA rejimida ishga tushdi");
+} else {
+  console.log("Brauzer rejimida ishlayapti");
+}
