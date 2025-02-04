@@ -19,3 +19,34 @@ window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
   deferredPrompt = event;
 });
+
+
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredPrompt = event;
+  
+  // Modal oynani ko'rsatish
+  document.getElementById("installModal").style.display = "block";
+});
+
+// O‘rnatish tugmasi bosilganda
+document.getElementById("installBtn").addEventListener("click", () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === "accepted") {
+        console.log("User accepted the install prompt");
+      } else {
+        console.log("User dismissed the install prompt");
+      }
+      deferredPrompt = null;
+    });
+  }
+  document.getElementById("installModal").style.display = "none";
+});
+
+// Modalni yopish
+document.getElementById("closeModal").addEventListener("click", () => {
+  document.getElementById("installModal").style.display = "none";
+});
